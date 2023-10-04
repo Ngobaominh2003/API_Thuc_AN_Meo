@@ -1,0 +1,5 @@
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache

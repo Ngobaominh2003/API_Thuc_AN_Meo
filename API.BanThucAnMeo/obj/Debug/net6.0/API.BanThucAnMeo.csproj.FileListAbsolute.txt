@@ -1,0 +1,6 @@
+C:\Users\dongc\Downloads\API.BanThucAnMeo\API.BanThucAnMeo\obj\Debug\net6.0\API.BanThucAnMeo.csproj.AssemblyReference.cache
+C:\Users\dongc\Downloads\API.BanThucAnMeo\API.BanThucAnMeo\obj\Debug\net6.0\API.BanThucAnMeo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dongc\Downloads\API.BanThucAnMeo\API.BanThucAnMeo\obj\Debug\net6.0\API.BanThucAnMeo.AssemblyInfoInputs.cache
+C:\Users\dongc\Downloads\API.BanThucAnMeo\API.BanThucAnMeo\obj\Debug\net6.0\API.BanThucAnMeo.AssemblyInfo.cs
+C:\Users\dongc\Downloads\API.BanThucAnMeo\API.BanThucAnMeo\obj\Debug\net6.0\API.BanThucAnMeo.csproj.CoreCompileInputs.cache
+C:\Users\dongc\Downloads\API.BanThucAnMeo\API.BanThucAnMeo\obj\Debug\net6.0\API.BanThucAnMeo.MvcApplicationPartsAssemblyInfo.cache
