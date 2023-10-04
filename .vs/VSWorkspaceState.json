@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Api.BanHang",
-    "\\BusinessLogicLayer",
-    "\\DataAccessLayer",
-    "\\DataModel"
+    "\\DAO",
+    "\\DataAccessLayer"
   ],
-  "SelectedNode": "\\BusinessLogicLayer\\HoaDonBusiness.cs",
+  "SelectedNode": "\\DAO\\HoaDonRepository.cs",
   "PreviewInSolutionExplorer": false
 }
