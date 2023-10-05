@@ -43,3 +43,6 @@ C:\Users\dongc\Downloads\BanHang\DataAccessLayer\obj\Debug\net6.0\DataAccessLaye
 C:\Users\dongc\Downloads\BanHang\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
 C:\Users\dongc\Downloads\BanHang\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
 C:\Users\dongc\Downloads\BanHang\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+C:\Users\dongc\Downloads\API bán thức ăn mèo\DAO\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\dongc\Downloads\API bán thức ăn mèo\DAO\obj\Debug\net6.0\refint\DataAccessLayer.dll
+C:\Users\dongc\Downloads\API bán thức ăn mèo\DAO\obj\Debug\net6.0\DataAccessLayer.pdb
