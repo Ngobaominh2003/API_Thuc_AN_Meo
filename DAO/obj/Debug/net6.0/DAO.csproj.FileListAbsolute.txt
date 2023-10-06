@@ -1,0 +1,17 @@
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\bin\Debug\net6.0\DAO.deps.json
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\bin\Debug\net6.0\DAO.dll
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\bin\Debug\net6.0\DAO.pdb
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\bin\Debug\net6.0\DTO.dll
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\bin\Debug\net6.0\DTO.pdb
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DAO.csproj.AssemblyReference.cache
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DAO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DAO.AssemblyInfoInputs.cache
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DAO.AssemblyInfo.cs
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DAO.csproj.CoreCompileInputs.cache
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DAO.csproj.CopyComplete
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DAO.dll
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\refint\DAO.dll
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DAO.pdb
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\ref\DAO.dll
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\bin\Debug\net6.0\DAO.runtimeconfig.json
+C:\Users\dongc\Downloads\API.BanThucAnMeo\DAO\obj\Debug\net6.0\DAO.genruntimeconfig.cache

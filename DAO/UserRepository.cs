@@ -1,15 +1,16 @@
-﻿using DataModel;
+﻿
+using DTO;
 
-namespace DataAccessLayer
+namespace DAO
 {
-    public class UserRepository:IUserRepository
+    public class UserRepository : IUserRepository
     {
         private IDatabaseHelper _dbHelper;
         public UserRepository(IDatabaseHelper dbHelper)
         {
             _dbHelper = dbHelper;
         }
-        public UserModel Login(string taikhoan, string matkhau)
+        public TaiKhoan Login(string taikhoan, string matkhau)
         {
             string msgError = "";
             try
@@ -20,12 +21,12 @@ namespace DataAccessLayer
                      );
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return dt.ConvertTo<UserModel>().FirstOrDefault();
+                return dt.ConvertTo<TaiKhoan>().FirstOrDefault();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-        } 
+        }
     }
 }

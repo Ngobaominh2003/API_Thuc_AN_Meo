@@ -1,8 +1,9 @@
-﻿using DataModel;
+﻿
+using DTO;
 
-namespace DataAccessLayer
+namespace DAO
 {
-    public class HoaDonRepository:IHoaDonRepository
+    public class HoaDonRepository : IHoaDonRepository
     {
         private IDatabaseHelper _dbHelper;
         public HoaDonRepository(IDatabaseHelper dbHelper)
@@ -10,7 +11,7 @@ namespace DataAccessLayer
             _dbHelper = dbHelper;
         }
 
-        public HoaDonModel GetDatabyID(int id)
+        public HoaDon GetDatabyID(int id)
         {
             string msgError = "";
             try
@@ -19,14 +20,14 @@ namespace DataAccessLayer
                      "@MaHoaDon", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return dt.ConvertTo<HoaDonModel>().FirstOrDefault();
+                return dt.ConvertTo<HoaDon>().FirstOrDefault();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public bool Create(HoaDonModel model)
+        public bool Create(HoaDon model)
         {
             string msgError = "";
             try
@@ -34,7 +35,7 @@ namespace DataAccessLayer
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_hoadon_create",
                 "@TenKH", model.TenKH,
                 "@Diachi", model.Diachi,
-                "@TrangThai", model.TrangThai,
+               
                 "@list_json_chitiethoadon", model.list_json_chitiethoadon != null ? MessageConvert.SerializeObject(model.list_json_chitiethoadon) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
@@ -47,7 +48,7 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
-        public bool Update(HoaDonModel model)
+        public bool Update(HoaDon model)
         {
             string msgError = "";
             try
@@ -56,7 +57,7 @@ namespace DataAccessLayer
                 "@MaHoaDon", model.MaHoaDon,
                 "@TenKH", model.TenKH,
                 "@Diachi", model.Diachi,
-                "@TrangThai", model.TrangThai,
+               
                 "@list_json_chitiethoadon", model.list_json_chitiethoadon != null ? MessageConvert.SerializeObject(model.list_json_chitiethoadon) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
@@ -70,7 +71,7 @@ namespace DataAccessLayer
             }
         }
 
-        public List<ThongKeKhachModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao)
+        public List<ThongKeKhach> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao)
         {
             string msgError = "";
             total = 0;
@@ -86,7 +87,7 @@ namespace DataAccessLayer
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
-                return dt.ConvertTo<ThongKeKhachModel>().ToList();
+                return dt.ConvertTo<ThongKeKhach>().ToList();
             }
             catch (Exception ex)
             {

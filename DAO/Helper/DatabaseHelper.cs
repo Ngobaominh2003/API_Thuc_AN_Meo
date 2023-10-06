@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace DataAccessLayer
+namespace DAO
 {
     public class DatabaseHelper : IDatabaseHelper
     {

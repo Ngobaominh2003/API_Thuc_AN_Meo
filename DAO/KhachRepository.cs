@@ -1,15 +1,15 @@
-﻿using DataModel;
+﻿using DTO;
 
-namespace DataAccessLayer
+namespace DAO
 {
-    public class KhachRepository:IKhachRepository
+    public class KhachRepository : IKhachRepository
     {
         private IDatabaseHelper _dbHelper;
         public KhachRepository(IDatabaseHelper dbHelper)
         {
             _dbHelper = dbHelper;
         }
-        public KhachModel GetDatabyID(string id)
+        public KhachHang GetDatabyID(string id)
         {
             string msgError = "";
             try
@@ -18,14 +18,14 @@ namespace DataAccessLayer
                      "@id", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return dt.ConvertTo<KhachModel>().FirstOrDefault();
+                return dt.ConvertTo<KhachHang>().FirstOrDefault();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public bool Create(KhachModel model)
+        public bool Create(KhachHang model)
         {
             string msgError = "";
             try
@@ -47,7 +47,7 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
-        public bool Update(KhachModel model)
+        public bool Update(KhachHang model)
         {
             string msgError = "";
             try
@@ -71,7 +71,7 @@ namespace DataAccessLayer
             }
         }
 
-        public List<KhachModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, string dia_chi)
+        public List<KhachHang> Search(int pageIndex, int pageSize, out long total, string ten_khach, string dia_chi)
         {
             string msgError = "";
             total = 0;
@@ -85,7 +85,7 @@ namespace DataAccessLayer
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
-                return dt.ConvertTo<KhachModel>().ToList();
+                return dt.ConvertTo<KhachHang>().ToList();
             }
             catch (Exception ex)
             {
