@@ -1,6 +1,6 @@
-﻿using BusinessLogicLayer;
-using DataAccessLayer;
-using DataModel;
+﻿using BLL;
+using DTO;
+using DAO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -8,7 +8,7 @@ using System.Net.Sockets;
 using System.Security.Claims;
 using System.Text;
 
-namespace BusinessLogicLayer
+namespace BLL
 {
     public class UserBusiness : IUserBusiness
     {
@@ -20,7 +20,7 @@ namespace BusinessLogicLayer
             secret = configuration["AppSettings:Secret"];
         }
 
-        public UserModel Login(string taikhoan, string matkhau)
+        public TaiKhoan Login(string taikhoan, string matkhau)
         {
             var user = _res.Login(taikhoan, matkhau);
             if (user == null)

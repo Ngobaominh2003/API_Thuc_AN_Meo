@@ -1,9 +1,9 @@
-﻿using BusinessLogicLayer;
-using DataAccessLayer;
-using DataModel;
+﻿using BLL;
+using DTO;
+using DAO;
 using System.Reflection;
 
-namespace BusinessLogicLayer
+namespace BLL
 {
     public class HoaDonBusiness : IHoaDonBusiness
     {
@@ -13,19 +13,19 @@ namespace BusinessLogicLayer
             _res = res;
         }
 
-        public HoaDonModel GetDatabyID(int id)
+        public HoaDon GetDatabyID(int id)
         {
             return _res.GetDatabyID(id);
         }
-        public bool Create(HoaDonModel model)
+        public bool Create(HoaDon model)
         {
             return _res.Create(model);
         }
-        public bool Update(HoaDonModel model)
+        public bool Update(HoaDon model)
         {
             return _res.Update(model);
         }
-        public List<UserModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao)
+        public List<ThongKeKhach> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao)
         {
             return _res.Search(pageIndex, pageSize, out total, ten_khach, fr_NgayTao, to_NgayTao);
         }

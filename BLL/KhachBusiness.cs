@@ -1,8 +1,8 @@
-﻿using BusinessLogicLayer;
-using DataAccessLayer;
-using DataModel;
+﻿using BLL;
+using DAO;
+using DTO;
 
-namespace BusinessLogicLayer
+namespace BLL
 {
     public class KhachBusiness : IKhachBusiness
     {
@@ -11,19 +11,19 @@ namespace BusinessLogicLayer
         {
             _res = res;
         }
-        public KhachModel GetDatabyID(string id)
+        public KhachHang GetDatabyID(string id)
         {
             return _res.GetDatabyID(id);
         }
-        public bool Create(KhachModel model)
+        public bool Create(KhachHang model)
         {
             return _res.Create(model);
         }
-        public bool Update(KhachModel model)
+        public bool Update(KhachHang model)
         {
             return _res.Update(model);
         }
-        public List<KhachModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, string dia_chi)
+        public List<KhachHang> Search(int pageIndex, int pageSize, out long total, string ten_khach, string dia_chi)
         {
             return _res.Search(pageIndex, pageSize, out total, ten_khach, dia_chi);
         }
