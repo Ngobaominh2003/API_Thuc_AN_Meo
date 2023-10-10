@@ -1,5 +1,5 @@
-﻿using BusinessLogicLayer;
-using DataModel;
+﻿using BLL;
+using DTO;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -86,20 +86,20 @@ namespace Api.BanHang.Controllers
         ///   [AllowAnonymous]
         [Route("get-by-id/{id}")]
         [HttpGet]
-        public KhachModel GetDatabyID(string id)
+        public KhachHang GetDatabyID(string id)
         {
             return _khachBusiness.GetDatabyID(id);
         }
         [Route("create-khach")]
         [HttpPost]
-        public KhachModel CreateItem([FromBody] KhachModel model)
+        public KhachHang CreateItem([FromBody] KhachHang model)
         {
             _khachBusiness.Create(model);
             return model;
         }
         [Route("update-khach")]
         [HttpPost]
-        public KhachModel UpdateItem([FromBody] KhachModel model)
+        public KhachHang UpdateItem([FromBody] KhachHang model)
         {
             _khachBusiness.Update(model);
             return model;

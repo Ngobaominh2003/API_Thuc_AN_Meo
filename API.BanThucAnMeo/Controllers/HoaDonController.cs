@@ -1,5 +1,5 @@
-﻿using BusinessLogicLayer;
-using DataModel;
+using BLL;
+using DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,20 +16,20 @@ namespace Api.BanHang.Controllers
         }
         [Route("get-by-id/{id}")]
         [HttpGet]
-        public HoaDonModel GetDatabyID(int id)
+        public HoaDon GetDatabyID(int id)
         {
             return _hoadonBusiness.GetDatabyID(id);
         }
         [Route("create-hoadon")]
         [HttpPost]
-        public HoaDonModel CreateItem([FromBody] HoaDonModel model)
+        public HoaDon CreateItem([FromBody] HoaDon model)
         {
             _hoadonBusiness.Create(model);
             return model;
         }
         [Route("update-hoadon")]
         [HttpPost]
-        public HoaDonModel Update([FromBody] HoaDonModel model)
+        public HoaDon Update([FromBody] HoaDon model)
         {
             _hoadonBusiness.Update(model);
             return model;

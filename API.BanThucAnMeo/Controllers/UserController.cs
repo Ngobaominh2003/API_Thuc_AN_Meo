@@ -1,5 +1,5 @@
-﻿using BusinessLogicLayer;
-using DataModel;
+﻿using BLL;
+using DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;

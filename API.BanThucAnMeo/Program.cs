@@ -1,6 +1,6 @@
-using BusinessLogicLayer;
-using DataAccessLayer;
-using DataModel;
+using BLL;
+using DAO;
+using DTO;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
