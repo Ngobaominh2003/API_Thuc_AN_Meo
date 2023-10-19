@@ -1,8 +1,8 @@
 ﻿-- Tạo cơ sở dữ liệu
-CREATE DATABASE TenCS;
+CREATE DATABASE MEO;
 
 -- Sử dụng cơ sở dữ liệu mới tạo
-USE TenCS;
+USE MEO;
 go
 -- Tạo bảng LoaiHoaDon
 CREATE TABLE dbo.LoaiHoaDon (
@@ -42,10 +42,10 @@ CREATE TABLE dbo.KhachHang (
 -- Tạo bảng HoaDon
 CREATE TABLE dbo.HoaDon (
     HoaDonID INT PRIMARY KEY,
-    MaKhachHang INT,
+    KhachHangID INT,
     NgayTao DATE,
     LoaiHoaDonID INT,
-    FOREIGN KEY (MaKhachHang) REFERENCES dbo.KhachHang(KhachHangID),
+    FOREIGN KEY (KhachHangID) REFERENCES dbo.KhachHang(KhachHangID),
     FOREIGN KEY (LoaiHoaDonID) REFERENCES dbo.LoaiHoaDon(LoaiHoaDonID)
 );
 
@@ -117,7 +117,7 @@ VALUES
     (5, N'Khách hàng 5', N'Nam', N'0123987654', N'khachhang5@example.com', N'Địa chỉ khách hàng 5');
 
 -- Chèn dữ liệu vào bảng HoaDon
-INSERT INTO dbo.HoaDon (HoaDonID, MaKhachHang, NgayTao, LoaiHoaDonID)
+INSERT INTO dbo.HoaDon (HoaDonID, KhachHangID, NgayTao, LoaiHoaDonID)
 VALUES
     (1, 1, '2023-10-10', 1),
     (2, 2, '2023-10-11', 2),
