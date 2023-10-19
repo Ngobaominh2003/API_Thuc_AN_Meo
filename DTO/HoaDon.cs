@@ -8,19 +8,21 @@ namespace DTO
 {
     public class HoaDon
     {
-        public int MaHoaDon { get; set; }
-        public string TenKH { get; set; }
-        public string Diachi { get; set; }
-        public bool TrangThai { get; set; }
-        public List<ChiTietHoaDon> list_json_chitiethoadon { get; set; }
+
+        public int HoaDonID { get; set; }
+        public int KhachHangID { get; set; }
+        public DateTime NgayTao { get; set; }
+        public int LoaiHoaDonID { get; set; }
+        
+        public List<ChiTietHoaDonBan> list_json_chitiethoadonban { get; set; }
     }
-    public class ChiTietHoaDon
+    public class ChiTietHoaDonBan
     {
-        public int MaChiTietHoaDon { get; set; }
-        public int MaHoaDon { get; set; }
-        public int MaSanPham { get; set; }
+        public int ChiTietHoaDonID { get; set; }
+        public int HoaDonID { get; set; }
+        public int SanPhamID { get; set; }
         public int SoLuong { get; set; }
-        public double TongGia { get; set; }
+        public decimal GiaBan { get; set; }
         public int status { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace DAO
             try
             {
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_hoadon_get_by_id",
-                     "@MaHoaDon", id);
+                     "@HoaDonID", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<HoaDon>().FirstOrDefault();
@@ -33,10 +33,11 @@ namespace DAO
             try
             {
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_hoadon_create",
-                "@TenKH", model.TenKH,
-                "@Diachi", model.Diachi,
-               
-                "@list_json_chitiethoadon", model.list_json_chitiethoadon != null ? MessageConvert.SerializeObject(model.list_json_chitiethoadon) : null);
+                "@KhachhangID", model.KhachHangID,
+                "@NgayTao", model.NgayTao,
+                "@LoaiHoaDonID", model.LoaiHoaDonID,
+              
+                "@list_json_chitiethoadon", model.list_json_chitiethoadonban != null ? MessageConvert.SerializeObject(model.list_json_chitiethoadonban) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -54,11 +55,12 @@ namespace DAO
             try
             {
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_hoa_don_update",
-                "@MaHoaDon", model.MaHoaDon,
-                "@TenKH", model.TenKH,
-                "@Diachi", model.Diachi,
+                "@HoaDonID", model.HoaDonID,
+                "@KhachHangID", model.KhachHangID,
+                "@NgayTao", model.NgayTao,
+                "@LoaiHoaDonID",model.LoaiHoaDonID,
                
-                "@list_json_chitiethoadon", model.list_json_chitiethoadon != null ? MessageConvert.SerializeObject(model.list_json_chitiethoadon) : null);
+                "@list_json_chitiethoadon", model.list_json_chitiethoadonban != null ? MessageConvert.SerializeObject(model.list_json_chitiethoadonban) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -83,16 +85,28 @@ namespace DAO
                     "@ten_khach", ten_khach,
                     "@fr_NgayTao", fr_NgayTao,
                     "@to_NgayTao", to_NgayTao
-                     );
+                );
+
                 if (!string.IsNullOrEmpty(msgError))
+                {
+                    // Handle the error message here, e.g., log it or take appropriate action.
+                    // You can also return an error response or throw a specific exception if needed.
                     throw new Exception(msgError);
-                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                }
+
+                if (dt.Rows.Count > 0)
+                {
+                    total = (long)dt.Rows[0]["RecordCount"];
+                }
+
                 return dt.ConvertTo<ThongKeKhach>().ToList();
             }
             catch (Exception ex)
             {
+                // Handle the exception appropriately, e.g., log it, return an error response, or rethrow it.
                 throw ex;
             }
+
         }
     }
 }
