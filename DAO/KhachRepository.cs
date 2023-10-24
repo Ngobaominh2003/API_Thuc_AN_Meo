@@ -1,4 +1,10 @@
-﻿using DTO;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DAO;
+using DTO;
 
 namespace DAO
 {
@@ -15,9 +21,11 @@ namespace DAO
             try
             {
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_khach_get_by_id",
-                     "@id", id);
+                    "@id", id);
                 if (!string.IsNullOrEmpty(msgError))
+                {
                     throw new Exception(msgError);
+                }
                 return dt.ConvertTo<KhachHang>().FirstOrDefault();
             }
             catch (Exception ex)
@@ -27,47 +35,52 @@ namespace DAO
         }
         public bool Create(KhachHang model)
         {
-            string msgError = "";
+            string msgError;
             try
             {
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_khach_create",
-                "@TenKH", model.TenKH,
-                "@GioiTinh", model.GioiTinh,
-                "@DiaChi", model.DiaChi,
-                "@SDT", model.SDT,
-                "@Email", model.Email);
-                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                    "@TenKhachHang", model.TenKhachHang,
+                    "@SDT", model.SDT,
+                    "@Email", model.Email,
+                    "@Diachi", model.DiaChi);
+
+                if (result != null && !string.IsNullOrEmpty(result.ToString()) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
                 }
+
                 return true;
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         }
+
         public bool Update(KhachHang model)
         {
             string msgError = "";
             try
             {
                 var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_khach_update",
-                "@Id", model.Id,
-                "@TenKH", model.TenKH,
-                "@GioiTinh", model.GioiTinh,
-                "@DiaChi", model.DiaChi,
-                "@SDT", model.SDT,
-                "@Email", model.Email);
-                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                    "@Id", model.KhachHangID,
+                    "@TenKhachHang", model.TenKhachHang,
+                    "@Email", model.Email,
+                    "@SDT", model.SDT,
+                    "@NgaySinh", model.NgaySinh,
+                    "@GioiTinh", model.GioiTinh,
+                    "@Diachi", model.DiaChi);
+
+                if (result != null && !string.IsNullOrEmpty(result.ToString()) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
                 }
+
                 return true;
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -75,6 +88,7 @@ namespace DAO
         {
             string msgError = "";
             total = 0;
+
             try
             {
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_khach_search",
