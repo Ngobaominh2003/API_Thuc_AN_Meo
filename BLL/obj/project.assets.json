@@ -888,43 +888,6 @@
             "rid": "win"
           }
         }
-      },
-      "DAO/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "DTO": "1.0.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.22",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.21",
-          "Microsoft.Extensions.Configuration": "7.0.0",
-          "Newtonsoft.Json": "13.0.3",
-          "System.Data.SqlClient": "4.8.5",
-          "System.IdentityModel.Tokens.Jwt": "7.0.2"
-        },
-        "compile": {
-          "bin/placeholder/DAO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DAO.dll": {}
-        }
-      },
-      "DTO/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.22",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.21",
-          "Microsoft.Extensions.Configuration": "7.0.0",
-          "Newtonsoft.Json": "13.0.3",
-          "System.Data.SqlClient": "4.8.5",
-          "System.IdentityModel.Tokens.Jwt": "7.0.2"
-        },
-        "compile": {
-          "bin/placeholder/DTO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DTO.dll": {}
-        }
       }
     }
   },
@@ -2297,22 +2260,12 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "DAO/1.0.0": {
-      "type": "project",
-      "path": "../DAO/DAO.csproj",
-      "msbuildProject": "../DAO/DAO.csproj"
-    },
-    "DTO/1.0.0": {
-      "type": "project",
-      "path": "../DTO/DTO.csproj",
-      "msbuildProject": "../DTO/DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "DAO >= 1.0.0",
-      "DTO >= 1.0.0",
+      "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DAO\\DAO.csproj",
+      "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DTO\\DTO.csproj",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.22",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.21",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.21",
@@ -2329,11 +2282,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dongc\\Downloads\\API.BanThucAnMeo\\BLL\\BLL.csproj",
+      "projectUniqueName": "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "C:\\Users\\dongc\\Downloads\\API.BanThucAnMeo\\BLL\\BLL.csproj",
+      "projectPath": "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\dongc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dongc\\Downloads\\API.BanThucAnMeo\\BLL\\obj\\",
+      "outputPath": "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dongc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2350,11 +2303,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\dongc\\Downloads\\API.BanThucAnMeo\\DAO\\DAO.csproj": {
-              "projectPath": "C:\\Users\\dongc\\Downloads\\API.BanThucAnMeo\\DAO\\DAO.csproj"
+            "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DAO\\DAO.csproj": {
+              "projectPath": "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DAO\\DAO.csproj"
             },
-            "C:\\Users\\dongc\\Downloads\\API.BanThucAnMeo\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\dongc\\Downloads\\API.BanThucAnMeo\\DTO\\DTO.csproj"
+            "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DTO\\DTO.csproj": {
+              "projectPath": "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DTO\\DTO.csproj"
             }
           }
         }
@@ -2425,5 +2378,25 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DTO\\DTO.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DTO\\DTO.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DAO\\DAO.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DAO\\DAO.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

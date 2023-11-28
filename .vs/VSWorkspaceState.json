@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DAO",
-    "\\DataAccessLayer"
+    "\\API.BanThucAnMeo",
+    "\\DAO"
   ],
-  "SelectedNode": "\\DAO\\HoaDonRepository.cs",
+  "SelectedNode": "\\API.BanThucAnMeo\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

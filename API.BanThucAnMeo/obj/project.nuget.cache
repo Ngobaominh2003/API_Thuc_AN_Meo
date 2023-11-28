@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4JRWTfJXDm4l2aI8rtNtWv8qAy5Qgdvl4balNRy+hNHNansg8b3CwG0+2Q50hKDCviTcigJ1+SUeNpE663p6mQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\dongc\\Downloads\\API.BanThucAnMeo\\API.BanThucAnMeo\\API.BanThucAnMeo.csproj",
+  "dgSpecHash": "J3ffhBkBRWbcMUqxn70SRfPYgMR4IbK9B/PyFab7XGROWtL9WNJMdMHjtrskdO+o5AndVdoG4erYaZtcvgy9NQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\API.BanThucAnMeo\\API.BanThucAnMeo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dongc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\dongc\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.22\\microsoft.aspnetcore.authentication.jwtbearer.6.0.22.nupkg.sha512",
@@ -61,5 +61,24 @@
     "C:\\Users\\dongc\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\dongc\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DTO\\DTO.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DTO\\DTO.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DAO\\DAO.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\dongc\\Downloads\\API bán thức ăn mèo\\DAO\\DAO.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
